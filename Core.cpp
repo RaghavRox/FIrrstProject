@@ -1,6 +1,5 @@
 #include"Core.h"
-
-int sudoku[9][9];
+#include<iostream>
 
 bool is_ok(int arr[9][9] , int i, int j, int k) {
     {
@@ -22,14 +21,14 @@ bool is_ok(int arr[9][9] , int i, int j, int k) {
 
 
 
-void solver() {
+void solver(int sudoku[][9]) {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             if (sudoku[i][j] == 0) {
                 for (int k = 1; k <= 9; k++) {
                     if (is_ok(sudoku, i, j, k)) {
                         sudoku[i][j] = k;
-                        solver();
+                        solver(sudoku);
                         sudoku[i][j] = 0;
                     }
                 }
@@ -37,13 +36,14 @@ void solver() {
             }
         }
     }
-}
 
-
-void take_input_sudoku(int barre[][9]) {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
-            sudoku[i][j] = barre[i][j];
+            std::cout << sudoku[i][j];
         }
     }
 }
+
+
+
+

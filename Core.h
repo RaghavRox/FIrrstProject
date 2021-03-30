@@ -1,4 +1,3 @@
 #pragma once
 bool is_ok();
-void solver();
-void take_input_sudoku(int barre[9][9]);
+void solver(int sudoku[][9]);

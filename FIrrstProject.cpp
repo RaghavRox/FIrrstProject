@@ -19,7 +19,12 @@ int main()
                          {0, 0, 5, 2, 0, 6, 3, 0, 0} };
     
 
-    take_input_sudoku(sudoku);
+    
+    solver(sudoku);
+
+    
+
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
