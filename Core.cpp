@@ -40,7 +40,7 @@ void solver() {
 }
 
 
-void take_input_sudoku(int barre[9][9]) {
+void take_input_sudoku(int barre[][9]) {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             sudoku[i][j] = barre[i][j];
